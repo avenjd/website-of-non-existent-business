@@ -1,0 +1,412 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+.main-color {
+	color: $main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+	width: 100%;
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1;
+
+	.nav-link,
+	a,
+	i {
+		color: $white;
+	}
+
+	.nav-link:hover,
+	.navbar-brand:hover {
+		color: $main-color;
+	}
+
+	.navbar-brand {
+		color: $white;
+		font-weight: bold;
+		transition: color 0.15s;
+	}
+
+	div a.active {
+		color: $main-color !important;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+}
+
+header {
+	color: $white;
+
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/hero-img-small.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -10;
+	}
+
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 30px;
+		bottom: 20px;
+		color: $white;
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover {
+		transform: color 0.3s;
+	}
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	background-image: url('..//img/about-hero-small.jpg');
+	background-size: cover;
+	background-position: center;
+	color: $light-gray;
+	z-index: 0;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+	.aboutus-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+
+		.aboutus-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+.portfolio {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+.prices {
+	.price-box {
+		margin: 20px 10px;
+		padding: 30px;
+		background-color: $white;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+		transition: transform 0.3s;
+		h3 {
+			color: $main-color;
+			text-transform: uppercase;
+		}
+
+		span {
+			font-weight: bold;
+		}
+
+		i {
+			font-size: 24px;
+			padding: 0 5px;
+		}
+
+		.price-tag {
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+
+	.price-info {
+		margin-top: 30px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.team {
+	position: relative;
+	background-image: url('../img/iocenters-2673316_1920.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	h2 {
+		color: $light-gray;
+	}
+
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+
+	.card {
+		transition: transform 0.3s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+	}
+
+	i {
+		padding: 10px;
+	}
+
+	.card:hover {
+		transform: scale(0.96);
+	}
+
+	.card-title {
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.card-body {
+		height: 160px;
+	}
+}
+
+.achievements {
+	i {
+		padding: 10px;
+		font-size: 48px;
+		color: $white;
+		text-shadow: 0 0 5px #000;
+	}
+
+	.achievements-list {
+		padding: 20px 0;
+	}
+
+	.achievement-number {
+		font-size: 22px;
+	}
+
+	.achievement-text {
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url('../img/palace-530055_1920.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+
+	h2 {
+		color: $light-gray;
+		font-weight: bold;
+	}
+
+	.underline {
+		background-color: $light-gray;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 9, 27, 0.7);
+		z-index: -5;
+	}
+
+	.contact-us {
+		display: flex;
+		align-items: center;
+		color: $white;
+
+		.contact-item {
+			margin: 30px 0;
+
+			h3 {
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+
+			.social-media {
+				font-size: 26px;
+
+				a {
+					padding: 10px;
+					color: $white;
+				}
+				a:hover {
+					color: $light-gray;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+
+	.aboutus-hero {
+		background-image: url('../img/about-hero-big.jpg');
+	}
+	.prices {
+		.price-info {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../img/hero-img-big.jpg');
+		}
+	}
+}
