@@ -1,4 +1,5 @@
 # website-of-non-existent-business
+#CODE WILL BE REFACTORING (with BEM method)
 
 # Built with
 - Semantic HTML5 markup
