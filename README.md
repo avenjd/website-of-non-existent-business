@@ -1,5 +1,4 @@
 # website-of-non-existent-business
-# OnePage Website 
 
 # Built with
 - Semantic HTML5 markup
